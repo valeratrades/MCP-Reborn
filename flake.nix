@@ -35,6 +35,7 @@
           openal
           libpulseaudio
           alsa-lib
+          flite  # Text-to-speech for narrator
 
           # GLFW dependencies (LWJGL 3 uses GLFW)
           glfw
