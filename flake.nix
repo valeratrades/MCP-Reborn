@@ -71,10 +71,16 @@
 
       in {
         packages.default = runClient;
+        packages.prismlauncher = pkgs.prismlauncher;
 
         apps.default = {
           type = "app";
           program = "${runClient}/bin/mcp-reborn";
+        };
+
+        apps.prism = {
+          type = "app";
+          program = "${pkgs.prismlauncher}/bin/prismlauncher";
         };
 
         devShells.default = pkgs.mkShell {
